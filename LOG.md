@@ -11,6 +11,20 @@ Append-only Audit-Spur. Format: `### YYYY-MM-DD HH:MM — Rolle` mit kurzer Besc
 
 ---
 
+### 2026-04-26 — Single-Claude-Curator — Phase-E-Pilot Project-Fork sugw-frontend-rework Setup
+
+User-Auftrag: Methode mit dem realen sugw-Projekt testen (Stadtgemeinschaft Wien Frontend-Refactoring auf Basis Stakeholder-Feedback Meeting 23.4.2026). Project-Fork als neuer Branch von `main@e355bac`. Methode aus Mother bleibt geerbt; MISSION per-Instance auf sugw-Projektziel umgeschrieben.
+
+Setup-Schritte: Branch `sugw-frontend-rework` von main angelegt. MISSION.md projektspezifisch (Forschungsfrage Frontend-Refactoring, 5 Erfolgskriterien, In-/Out-of-Scope). CLAUDE.md Aktueller-Stand-Block auf Drei-Rollen-Aufstellung (Claude A Tech, Claude B Inhalt, Koordinator Synthese). `Project/sugw-frontend-rework Roadmap.md` mit 6 Phasen plus Vollständigkeitsprinzip. `Project/sugw-Subagent-Prompts.md` mit zwei vollständigen System-Prompts (Phase-1-bis-5-Coverage, Re-Entry-Logik) plus Pfade-Cheat-Sheet. `Knowledge/sugw Daten-Architektur.md` (Strang C, Pipeline-Repo-Inspektion: TEI → CSV → JSON → HTML, 4-Level-Annotation-Modell, Approval-Mechanismus `RELEASED_CORPORA` in `edition/config.py` identifiziert). Templates Vorschlag + Verifikation. Traceability-Matrix-Skeleton mit 17 vorab-skizzierten S-IDs. Vorschläge- und Verifikations-Verzeichnisse angelegt. COORDINATION mit Koordinator-Slot Sessionende, zwei Übergaben Koordinator → Claude A und → Claude B.
+
+Live-Server `http://127.0.0.1:8765/` über Edition-Repo. Phase-4-Server auf 8766 in Phase 4.
+
+V15-Pilot Beobachtung 1 (Reflux Mother): Subagent-Briefing-Aufwand ~1000 Zeilen Vorbereitungs-Material. Trade-off hoher initialer Aufwand vs. Selbsterklärung des Subagent-Sessionstarts.
+
+Stand: Phase 1 Strang C abgeschlossen. Strang A (Frontend-Inspektion) und Strang B (Stakeholder-Feedback-Analyse) ausstehend — User-Entscheidung Subagent-Conversations vs Koordinator selbst.
+
+---
+
 ### 2026-04-26 — Single-Claude-Curator — Phase-B-Refactoring (Template-Reife)
 
 User-Auftrag: Vault inhaltlich und strukturell auf Template-Reife refaktorisieren, am Lesevault-Pattern orientiert. Single-Claude-Session, V20 außer Kraft (kein Drei-Rollen-Konsens nötig). Phase B aus Forschungsplan vorgezogen und durchgeführt.

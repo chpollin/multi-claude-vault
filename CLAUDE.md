@@ -10,13 +10,22 @@ status: active
 
 Werkstatt eines Forschungsprojekts: parallele Claude-Code-Instanzen entwickeln eine Methode für die kollaborative Vault-Arbeit, indem sie sie anwenden. Selbstreferentiell. Der parallele Lesevault `c:/Users/Chrisi/Documents/obsidian` ist Wissensquelle und bleibt unangetastet — hier wird gearbeitet, dort wird gelesen.
 
-## Aktueller Stand (2026-04-26, post-refactoring)
+## Aktueller Stand (2026-04-26, Branch sugw-frontend-rework — Phase-E-Pilot)
 
-**Phase A** (Methoden-Reife) abgeschlossen: METHOD trägt 5 ratifizierte Items (V1, V2, V3, V6, V8) plus die Vier+1-Schichten-Architektur als integrierte Sektion (V7+V14b+V19 substanziell aufgenommen). 12 weitere V-Items konsensreif für die nächste Welle. BACKLOG kuratiert mit V1–V20 plus F1–F13.
+**Project-Fork-Modus aktiv.** Dieser Branch ist erste Anwendung der Methode an einem realen Projekt: sugw-Frontend-Refactoring auf Basis Stakeholder-Feedback (Meeting 23.4.2026). Mother-Vault auf `main` trägt die Methode (V1–V8 ratifiziert + Vier+1-Schichten); Fork hat eigene MISSION mit Projektziel (siehe [[MISSION]]).
 
-**Phase B** (Strukturkonsolidierung) durchgeführt 2026-04-26: Vault auf Vier+1-Schichten-Topologie refaktoriert, distributionsfähiger Template-Vault. STRUCTURE.md aufgelöst (in METHOD integriert). Sub-Ordner Knowledge/, Project/, Roles/, Sessions/, Findings/, Experiments/, Concepts/, Literature/, Templates/, instances/, _archive/ angelegt und befüllt. README- und HOME-Onboarding tauglich.
+**Drei-Rollen-Aufstellung:**
+- **Claude A** (Tech-Strang): Frontend-Inspektion → Tech-Vorschläge V1-V5/V8-V10 → Implementation in sugw-Pipeline-Repo Branch `frontend-rework-2026-04` → Tech-Verifikations-Docs.
+- **Claude B** (Inhalt-Strang): Stakeholder-Feedback-Analyse → Inhalts-Vorschläge V6 (Glossar) + V7 (Terminologie) → Inhalts-Implementation → Stakeholder-Verifikations-Mapping.
+- **Koordinator** (Single-Curator, diese Session): Strang C (Daten-Architektur) → Synthese + Traceability-Matrix → Konflikt-Koordination → Verifikations-Master + PR-Stub → Reflux-Findings für Mother.
 
-**Phase C+** (GitHub-Pages, Paper, Multi-Mode-Forks, Vierte-Instanz-Test) wartet.
+**Vollständigkeitsprinzip:** kein Stakeholder-Feedback-Punkt darf still abgewählt werden. Jede S-ID hat mindestens eine V-ID, jede V-ID hat Implementation-Status, jede implementierte V-ID hat Verifikations-Doc. Tracking in [[Project/sugw-Traceability-Matrix]].
+
+**Live-Server:** `http://127.0.0.1:8765/` (Original-Frontend, Edition-Repo). Ab Phase 4 zusätzlich `http://127.0.0.1:8766/` (Build-Output von `frontend-rework-2026-04`).
+
+**Phasen-Status:** Phase 1 (Inspektion) parallel in Bearbeitung. Phase 2 (Synthese) wartet auf Outputs A+B+C. Phase 3-5 sequenziell danach. Phase 6 (Reflux zur Mother) am Ende.
+
+**Mother-Stand auf main:** Phase A (Methoden-Reife) und Phase B (Strukturkonsolidierung) abgeschlossen. METHOD trägt 5 ratifizierte Items (V1, V2, V3, V6, V8) plus Vier+1-Schichten-Architektur. 12 weitere V-Items konsensreif. Distributionsfähiger Template-Vault.
 
 Repo: [chpollin/multi-claude-vault](https://github.com/chpollin/multi-claude-vault). Lizenz MIT.
 
