@@ -11,6 +11,26 @@ Append-only Audit-Spur. Format: `### YYYY-MM-DD HH:MM — Rolle` mit kurzer Besc
 
 ---
 
+### 2026-04-26 — Single-Claude-Curator — sugw-frontend-rework Phase 2+3+5-Setup+6-Vorbereitung
+
+User-Auftrag: alles synthetisieren, zusammenführen, destillieren, verbessern und abschließen. Vier Phasen aus der Roadmap durchgezogen.
+
+**Phase 2 — Synthese** mit allen drei Strang-Outputs (Claude A Frontend-Inspektion, Claude B Stakeholder-Feedback, Koordinator Daten-Architektur). Traceability-Matrix mit allen 37 S-IDs befüllt, 11 V-IDs (V1-V11) zugeordnet — keine S-ID still abgewählt (S30/S33/S36 als methodisch-dokumentarisch markiert mit klarer Begründung). Lage-Notiz Sessions/2026-04-26 - sugw Synthesis 1.md mit V17-Pilot-Quality-Flags gegen alle 5 MISSION-Erfolgskriterien (1× ⚠ Risiko, 4× ✗ Verletzt — ehrliche IST-Bewertung). Drei zentrale konvergente Befunde dokumentiert: Approval-Mechanismus existiert aber halb angewandt; Suchfunktion mehrschichtig defekt; V20 trägt auch für externe Stakeholder-Aussagen.
+
+**Phase 3 — Vorschläge ausgearbeitet.** 11 V-Docs in Project/sugw-Vorschläge/V1-V11 mit jeweils Frontmatter (vorschlag-id, stakeholder-issues, betroffene-files, aufwand, status), Problem-Sektion, Lösungsansatz (Datenseite/Build/Frontend), testbare Akzeptanzkriterien, Verifikations-Plan (alt vs neu Tabelle), Risiken/Antipatterns, Anschluss-Querbezüge. V1 Korpus-Approval-Marker, V2 Filterung der Indizes, V3 Suche mit Diakritika+Volltext+ID (Test-Anker S20 Pötel/Pötlin/Regest 3819), V4 Personen-Profile parallel zu Regesten, V5 Bidirektionale Verlinkung+Beziehungen, V6 Glossar mit Mouse-Over (14+ Begriffe), V7 Terminologie-Refactoring (Tod→als verstorben genannt, Factoid→Stakeholder-Konsultation, Q-Kategorie-Hybrid), V8 Statistiken % statt absolut, V9 Verb-Browser-Aggregation, V10 Exploration aufräumen, V11 Frontend-Polish.
+
+**Phase 5 — Verifikations-Master + PR-Stub.** Project/sugw-Verifikations-Master.md mit Top-Level-Checkliste pro V-ID plus vollständige Stakeholder-Aussagen-Checkliste S1-S37 mit Status-Spalte. Project/sugw-PR-Stub.md mit PR-Title-Vorschlag, strukturierter PR-Beschreibung kategorisiert nach Schweregrad, Pre-Merge-Checkliste, User-Klärungspunkte (a)-(h), Test-Plan, Reviewer-Empfehlung.
+
+**Phase 6 — Reflux-Vorbereitung.** Findings/2026-04-26 - Phase-E-Pilot Reflux zur Mother.md mit 5 strukturellen Befunden für Mother-METHOD: V15 No-shared-write tragfähig (validiert), V20 Externalisierung auf Stakeholder-Aussagen (semantische Erweiterung), V18 Light-Mode (Branch statt Repo) als zweiter Modus ergänzen, Subagent-Briefing-Größe als Feature, Vollständigkeitsprinzip als eigene Konvention V23-Vorschlag. Reflux-Status: pending bis Phase 4 abgeschlossen ist.
+
+**Vault-Stand am Phase-3-Ende:** 11 V-Docs ready-for-implementation (mit explizit dokumentierten User-Klärungspunkten); Traceability-Matrix vollständig; Verifikations-Master skeleton-bereit für Phase-5-Befüllung; PR-Stub finalisierbar; Reflux-Finding pending für Mother-Merge nach Phase 4.
+
+**User-Klärungen pendent vor Phase 4:** (a) RELEASED_CORPORA-Liste-Bestätigung; (b) Factoid-Ersatzbegriff von Stakeholder; (c) Q-Kategorie-Hybrid-Bestätigung; (d) Glossar-Begriffsliste-Review; (e) Aaron-der-Jude-Datenbasis-Klärung; (f) exploration/places-Variante; (g) Statistik-Datenbasis-Definition; (h) Verb-Cluster-Schwellenwert.
+
+**V15-Pilot-Reflexion live:** zwei parallele Subagent-Conversations haben Phase-1-Output sauber geliefert, ohne Race Conditions, ohne Schicht-2-Edits — V15 No-shared-write-Klausel hat unter Realbedingungen getragen. V20 hat bei Claude B durchgehend gehalten (37 S-IDs mit wörtlichen Zitaten und expliziten Quellen-Referenzen). Konvergenz von Strang A (IST) + Strang B (SOLL) + Strang C (Architektur) zu konsistenter Synthese ohne wesentliche Lücken.
+
+---
+
 ### 2026-04-26 — Single-Claude-Curator — Phase-E-Pilot Project-Fork sugw-frontend-rework Setup
 
 User-Auftrag: Methode mit dem realen sugw-Projekt testen (Stadtgemeinschaft Wien Frontend-Refactoring auf Basis Stakeholder-Feedback Meeting 23.4.2026). Project-Fork als neuer Branch von `main@e355bac`. Methode aus Mother bleibt geerbt; MISSION per-Instance auf sugw-Projektziel umgeschrieben.

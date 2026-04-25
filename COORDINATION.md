@@ -16,13 +16,13 @@ Single Bulletin-Board (V8). Slot-Format pro aktiver Session: `### Rolle (— opt
 
 ### Koordinator — Single-Curator (Branch sugw-frontend-rework)
 - last-touch: 2026-04-26
-- Last seen: Phase-1-Setup für Project-Fork sugw-frontend-rework abgeschlossen. Branch von `main@e355bac` abgezweigt. Project-MISSION-Fork geschrieben (Stadtgemeinschaft Wien Frontend-Refactoring). Roadmap mit 6 Phasen plus Vollständigkeitsprinzip. Subagent-Prompts für Claude A (Tech) und Claude B (Inhalt) ausformuliert mit Phase-1-bis-5-Coverage und Re-Entry-Logik. Pfade-Cheat-Sheet oben in Subagent-Prompts. Daten-Architektur dokumentiert (Strang C — Knowledge/sugw Daten-Architektur.md): Pipeline-Approval-Mechanismus `RELEASED_CORPORA` in `edition/config.py` existiert bereits, kritische Frage ob durchgängig angewandt. Templates Vorschlag + Verifikation angelegt. Traceability-Matrix-Skeleton mit Vorschau auf 17 erwartete S-IDs.
-- Working on: Sessionende für diese Phase-1-Setup-Arbeit. Nächster Aktivierungstrigger: Rückkehr von Claude A (Findings/2026-04-26 - sugw Frontend-Inspektion.md mit `status: complete`) UND Claude B (Findings/2026-04-26 - sugw Stakeholder-Feedback.md mit `status: complete`). Dann Phase 2 Synthese.
+- Last seen: **Phase 1+2+3 abgeschlossen.** Phase-1-Setup, Synthese (Phase 2 mit vollständiger Traceability-Matrix für 37 S-IDs → 11 V-IDs, Quality-Flag-Lage-Notiz V17-Pilot), Phase 3 (alle 11 V-Docs V1-V11 mit Akzeptanzkriterien und Verifikations-Plan), Phase-5-Setup (Verifikations-Master-Skeleton + PR-Stub), Phase-6-Vorbereitung (Reflux-Finding für Mother mit 5 methodischen Lessons). Vollständigkeitsprinzip eingehalten: keine S-ID abgewählt; S30/S33/S36 als methodisch-dokumentarisch markiert. Drei User-Klärungspunkte vor Phase 4 dokumentiert (V1 Korpus-Liste, V7 Factoid-Ersatz/Q-Hybrid, V8 Datenbasis-Definition, weitere in PR-Stub).
+- Working on: Sessionende. Phase 4 (Implementation in sugw-Pipeline-Repo Branch frontend-rework-2026-04) wartet auf User-Klärungen (a)-(h) im PR-Stub plus User-Freigabe für sugw-Pipeline-Repo-Branch-Erzeugung.
 - Files locked: keine.
-- Will touch in Phase 2: Project/sugw-Traceability-Matrix.md (Befüllung), Sessions/2026-04-26 - sugw Synthesis 1.md (neue Lage-Notiz mit Quality Flags V17-Pilot), ggf. Vorab-Vorschlags-Skelette in Project/sugw-Vorschläge/.
-- Will touch in Phase 5: Project/sugw-Verifikations-Master.md, PR-Stub.
-- Will touch in Phase 6: Findings für Mother-Reflux.
-- Notes: User hat das Drei-Rollen-Modell für sugw-Frontend-Rework gestartet, Vollständigkeitsprinzip ist explizit (kein Stakeholder-Feedback ignorieren). V15-Pilot (Subagent-Integration) wird hier zum ersten Mal mit echten parallelen Conversations getestet — Reflux-Beobachtungen für Mother dokumentieren.
+- Will touch in Phase 4 (gemäß V-Dokumenten — Subagent-Phase): Implementation in sugw-Pipeline-Repo (NICHT in diesem Vault, hier nur Status-Updates der V-Docs und Traceability-Matrix). 
+- Will touch in Phase 5: V-Verifikations-Docs konsolidieren in Verifikations-Master, PR-Stub finalisieren.
+- Will touch in Phase 6: Reflux-Finding ggf. um Phase-4-Lessons erweitern, Branch-Merge in main nach User-Freigabe.
+- Notes: V15-Pilot erfolgreich, V20-Externalisierung validiert, V18-Light-Mode (Branch statt Repo) tragfähig, Vollständigkeitsprinzip-Pattern bewährt — alle in [[Findings/2026-04-26 - Phase-E-Pilot Reflux zur Mother]] dokumentiert.
 
 ## Übergaben
 
