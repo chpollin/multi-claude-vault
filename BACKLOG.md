@@ -144,6 +144,34 @@ Vorschlag (Erweiterte Slot-Felder Last seen / Will touch) ist in V8-Migration au
 - **Status:** vorgeschlagen, braucht Diskussion zur Optionswahl
 - **Stellungnahmen:** —
 
+### V15 — Subagent-Integration pro Top-Level-Instanz
+- **Vorschlag:** Jede Top-Level-Instanz darf Subagents spawnen, die im namespaced Bereich `instances/Claude-N/subtasks/` arbeiten. Subagent hat keinen eigenen COORDINATION-Slot — sie wird durch den Top-Level vertreten. Subagent muss V6 (Pre-Edit-Read) auch gegen die eigene Top-Level-Instanz disziplinär anwenden, weil die parallel weiterarbeitet. Output des Subagents wird vom Top-Level konsolidiert in die gemeinsamen Schicht-2-Files (BACKLOG, COORDINATION, Lage-Notizen) übertragen.
+- **Begründung:** Aus Goal-Klärung mit User: Subagents sind ein zweiter Skalierungs-Hebel orthogonal zu Top-Level-Anzahl. Klare Konvention nötig, sonst entstehen Race Conditions zwischen Subagent und anderen Top-Levels (oder zwischen Subagent und eigener Top-Level-Instanz). Adressiert Frage 2 aus dem Goal-Dialog.
+- **Vorgeschlagen von:** Koordinator (Claude #1), 2026-04-26
+- **Status:** vorgeschlagen
+- **Stellungnahmen:** —
+
+### V16 — Skalierungs-Profil 3 / 5 / >10
+- **Vorschlag:** Methode wird auf drei bis fünf Top-Level-Instanzen optimiert. Bei drei Instanzen reicht V6 (Pre-Edit-Read reaktiv); bei fünf wird V13 (Files locked als opt-in) wichtiger plus Cluster-Differenzierung über V1-Suffixe (z.B. `Inhalt (Methode)` und `Inhalt (Falldaten)`); ab fünf wird V4-Schicht (Lage-Notizen) deutlich häufiger gebraucht. Skalierung über zehn Top-Levels wird in MISSION als Out-of-Scope markiert — würde Sub-COORDINATION pro Cluster oder anderen Mechanismus erfordern.
+- **Begründung:** Aus Goal-Klärung: User erwartet Default 3, Stretch 5, Subagents als zusätzliche Achse, jenseits davon Out-of-Scope. Ohne explizites Profil verwischt die Methode zwischen "funktioniert für 3" und "skaliert beliebig", was beide Seiten schwächt.
+- **Vorgeschlagen von:** Koordinator (Claude #1), 2026-04-26
+- **Status:** vorgeschlagen
+- **Stellungnahmen:** —
+
+### V17 — Validation-Loop des Koordinators
+- **Vorschlag:** Koordinator-Rolle (Claude #1) ist explizit für laufende Validierung des Vault-Standes gegen die Erfolgskriterien aus MISSION zuständig. Mechanik: pro Lage-Notiz Quality Flags ✓/⚠ gegen jedes Erfolgskriterium; pro Iteration Check, ob METHOD wächst, BACKLOG abnimmt, Konflikte gelöst werden. Strategische Course-Corrections eskaliert der Koordinator an den User mit klarer Frage und Optionen, statt eigenmächtig zu entscheiden.
+- **Begründung:** Aus Goal-Klärung mit User (Frage 3): Validation ist Koordinator-Aufgabe gegen User. Ohne formale Konvention bleibt sie implizit und je nach Tagesform vorhanden oder nicht. Verankerung in METHOD macht die Validierung über Rollenwechsel hinweg robust.
+- **Vorgeschlagen von:** Koordinator (Claude #1), 2026-04-26
+- **Status:** vorgeschlagen
+- **Stellungnahmen:** —
+
+### V18 — Multi-Mode-Architektur (Mother-Vault + Project-Forks)
+- **Vorschlag:** Der Vault unterstützt zwei Operating Modes — projektübergreifende Methodenarbeit (Mother-Vault, current state) und projektspezifische Anwendung (Project-Fork pro Use Case). METHOD shared (wandert in alle Forks), MISSION per-Instance (Mother hat eigene MISSION zur Methodenentwicklung; jeder Fork hat eigene MISSION zum Projektziel). STRUCTURE bleibt gleich. Schicht-3-Beitragsdateien (Claude-N.md) sind per Fork frisch — keine Mother-Identitäten in Forks.
+- **Begründung:** Aus Goal-Klärung mit User (Frage 1): beide Modes sollen mitgedacht werden. Ohne klare Architektur-Trennung wird der Mother-Vault zu einer Mischung aus Methode und konkreter Projektarbeit, was Distribution unübersichtlich macht und Drift erzeugt. Ratifizierung dieses Vorschlags ist Voraussetzung für Phase E im Forschungsprojekt-Plan.
+- **Vorgeschlagen von:** Koordinator (Claude #1), 2026-04-26
+- **Status:** vorgeschlagen
+- **Stellungnahmen:** —
+
 ## Offene Fragen
 
 Format pro Frage analog zu V-Items: Frage, Status, Antworten pro Rolle. So wird Konsensfindung sichtbar.
