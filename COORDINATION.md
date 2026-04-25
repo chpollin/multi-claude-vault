@@ -16,13 +16,13 @@ Single Bulletin-Board (V8). Slot-Format pro aktiver Session: `### Rolle (— opt
 
 ### Koordinator — Single-Curator (Branch sugw-frontend-rework)
 - last-touch: 2026-04-26
-- Last seen: **Phase 1+2+3 abgeschlossen.** Phase-1-Setup, Synthese (Phase 2 mit vollständiger Traceability-Matrix für 37 S-IDs → 11 V-IDs, Quality-Flag-Lage-Notiz V17-Pilot), Phase 3 (alle 11 V-Docs V1-V11 mit Akzeptanzkriterien und Verifikations-Plan), Phase-5-Setup (Verifikations-Master-Skeleton + PR-Stub), Phase-6-Vorbereitung (Reflux-Finding für Mother mit 5 methodischen Lessons). Vollständigkeitsprinzip eingehalten: keine S-ID abgewählt; S30/S33/S36 als methodisch-dokumentarisch markiert. Drei User-Klärungspunkte vor Phase 4 dokumentiert (V1 Korpus-Liste, V7 Factoid-Ersatz/Q-Hybrid, V8 Datenbasis-Definition, weitere in PR-Stub).
-- Working on: Sessionende. Phase 4 (Implementation in sugw-Pipeline-Repo Branch frontend-rework-2026-04) wartet auf User-Klärungen (a)-(h) im PR-Stub plus User-Freigabe für sugw-Pipeline-Repo-Branch-Erzeugung.
+- Last seen: **Phase 1+2+3 abgeschlossen + Phase-4-Vorbereitung komplett.** Erweiterung gegenüber vorigem Stand: (1) **GitHub-Issues #1–#12** im Edition-Repo angelegt (Milestone `frontend-rework-2026-04`, Labels `frontend-rework` + `stakeholder-23-04-2026`); (2) **8 User-Klärungen durch Recherche beantwortet** in [[Project/sugw-User-Klärungen]] — Code-Lektüre (RELEASED_CORPORA), Daten-Stichproben (persons_search.json: 47% dc=0), Original-Wortlaut (Protokoll); (3) **READMEs** in sugw-Vorschläge/ und sugw-Verifikation/; (4) **Cross-Vault-Verlinkung Second Brain** — neuer Hub-Eintrag `c:/Users/Chrisi/Documents/obsidian/Projects/sugw/SuGW – Frontend-Rework Stakeholder-Meeting 23.04.2026.md`, plus Verlinkung in Strategischem Wissensdokument + Projektabschluss April 2026 + ACTIVE-WORK; (5) **Method-Lessons-Erweiterung** mit V21 (GitHub-Issues-Spiegel) + V22 (Recherche statt Klärung) als Reflux-Erweiterung.
+- Working on: Sessionende. Phase 4 startbereit, wartet nur auf User-Freigabe für Pipeline-Repo-Branch `frontend-rework-2026-04`.
 - Files locked: keine.
-- Will touch in Phase 4 (gemäß V-Dokumenten — Subagent-Phase): Implementation in sugw-Pipeline-Repo (NICHT in diesem Vault, hier nur Status-Updates der V-Docs und Traceability-Matrix). 
-- Will touch in Phase 5: V-Verifikations-Docs konsolidieren in Verifikations-Master, PR-Stub finalisieren.
-- Will touch in Phase 6: Reflux-Finding ggf. um Phase-4-Lessons erweitern, Branch-Merge in main nach User-Freigabe.
-- Notes: V15-Pilot erfolgreich, V20-Externalisierung validiert, V18-Light-Mode (Branch statt Repo) tragfähig, Vollständigkeitsprinzip-Pattern bewährt — alle in [[Findings/2026-04-26 - Phase-E-Pilot Reflux zur Mother]] dokumentiert.
+- Will touch in Phase 4: Implementation in sugw-Pipeline-Repo (NICHT in diesem Vault, hier nur Status-Updates der V-Docs und Traceability-Matrix, plus Issue-Closures).
+- Will touch in Phase 5: V-Verifikations-Docs befüllen pro V-ID, Verifikations-Master finalisieren.
+- Will touch in Phase 6: Reflux-Findings (V15+V18+V20 plus V21+V22) als PR in main; Branch-Merge nach User-Freigabe.
+- Notes: V15-Pilot erfolgreich, V20-Externalisierung validiert, V18-Light-Mode tragfähig, Vollständigkeitsprinzip bewährt, V21/V22 als Phase-4-Vorbereitungs-Lessons hinzugekommen.
 
 ## Übergaben
 

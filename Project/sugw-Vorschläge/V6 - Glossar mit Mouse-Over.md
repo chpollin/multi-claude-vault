@@ -1,6 +1,7 @@
 ---
 type: knowledge
 vorschlag-id: V6
+github-issue: 6
 created: 2026-04-26
 tags: [sugw, vorschlag, frontend, glossar, inhalt]
 stakeholder-issues: [S3, S5, S6, S7, S11, S15, S17]

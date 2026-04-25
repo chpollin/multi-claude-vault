@@ -1,6 +1,7 @@
 ---
 type: knowledge
 vorschlag-id: V3
+github-issue: 3
 created: 2026-04-26
 tags: [sugw, vorschlag, frontend, suche]
 stakeholder-issues: [S16, S17, S18, S19, S20]

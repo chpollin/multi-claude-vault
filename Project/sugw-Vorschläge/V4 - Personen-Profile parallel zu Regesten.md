@@ -1,6 +1,7 @@
 ---
 type: knowledge
 vorschlag-id: V4
+github-issue: 4
 created: 2026-04-26
 tags: [sugw, vorschlag, frontend, personen-profil]
 stakeholder-issues: [S21, S22, S27]

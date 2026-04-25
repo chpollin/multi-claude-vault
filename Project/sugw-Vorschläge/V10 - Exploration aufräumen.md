@@ -1,6 +1,7 @@
 ---
 type: knowledge
 vorschlag-id: V10
+github-issue: 10
 created: 2026-04-26
 tags: [sugw, vorschlag, frontend, exploration]
 stakeholder-issues: [S32, S33, S34]

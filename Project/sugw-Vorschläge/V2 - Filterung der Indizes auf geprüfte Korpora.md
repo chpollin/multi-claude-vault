@@ -1,6 +1,7 @@
 ---
 type: knowledge
 vorschlag-id: V2
+github-issue: 2
 created: 2026-04-26
 tags: [sugw, vorschlag, frontend, indizes]
 stakeholder-issues: [S25, S26, S27, S29, S37]

@@ -130,10 +130,13 @@ Methodische Lessons aus Phase 1–5 dokumentieren als Findings mit `reflux-targe
 
 ## Status
 
-- Phase 1 in Bearbeitung. Branch `sugw-frontend-rework` von `main@e355bac` abgezweigt.
+- **Phase 1 abgeschlossen** (2026-04-26). Drei Stränge geliefert: Frontend-Inspektion (Claude A), Stakeholder-Feedback (Claude B), Daten-Architektur (Koordinator).
+- **Phase 2 abgeschlossen** (2026-04-26). 37 S-IDs auf 11 V-IDs konsolidiert in [[Project/sugw-Traceability-Matrix]]. Lage-Notiz [[Sessions/2026-04-26 - sugw Synthesis 1]].
+- **Phase 3 abgeschlossen** (2026-04-26). 11 V-Docs `ready-for-implementation` in `sugw-Vorschläge/`.
+- **GitHub-Issues angelegt** (2026-04-26): V1–V11 als Issues #1–#11, plus Tracking-Issue #12 im Edition-Repo. Milestone `frontend-rework-2026-04`.
+- **8 User-Klärungen durch Recherche beantwortet** (2026-04-26): siehe [[Project/sugw-User-Klärungen]] — Code-/Daten-/Original-Recherche statt Stakeholder-Rückfrage. Stakeholder-Bestätigung erfolgt rückwirkend in Phase 5.
+- **Phase 4 startbereit.** Pipeline-Repo-Branch `frontend-rework-2026-04` muss vom User angelegt werden (Hard-Constraint kein Branch-Push ohne Freigabe). Implementations-Reihenfolge: #1→#2 (Filter), #3 (Suche), #4+#5 (Profile), #6+#7 (Inhalt), #8 (Statistik), #9+#10 (Exploration), #11 (Polish).
 - Server läuft auf `http://127.0.0.1:8765/`.
-- Subagent-Prompts in [[Project/sugw-Subagent-Prompts]] für Phase 1 (Agent A, B), Phase 4 (Implementation-Agent), Phase 5 (Verifikations-Master-Konsolidierung).
-- Eigener Strang C (Daten-Architektur) in Arbeit.
 
 ## Anschluss
 

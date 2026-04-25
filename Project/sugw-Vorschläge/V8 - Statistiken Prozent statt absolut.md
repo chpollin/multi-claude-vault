@@ -1,6 +1,7 @@
 ---
 type: knowledge
 vorschlag-id: V8
+github-issue: 8
 created: 2026-04-26
 tags: [sugw, vorschlag, frontend, statistik]
 stakeholder-issues: [S12, S13, S26, S37]

@@ -1,6 +1,7 @@
 ---
 type: knowledge
 vorschlag-id: V7
+github-issue: 7
 created: 2026-04-26
 tags: [sugw, vorschlag, frontend, terminologie, inhalt]
 stakeholder-issues: [S1, S2, S3, S4, S8, S9, S10]

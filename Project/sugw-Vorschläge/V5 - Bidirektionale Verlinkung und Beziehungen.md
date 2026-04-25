@@ -1,6 +1,7 @@
 ---
 type: knowledge
 vorschlag-id: V5
+github-issue: 5
 created: 2026-04-26
 tags: [sugw, vorschlag, frontend, verlinkung]
 stakeholder-issues: [S22, S23, S24]

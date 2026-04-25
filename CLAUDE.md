@@ -23,7 +23,7 @@ Werkstatt eines Forschungsprojekts: parallele Claude-Code-Instanzen entwickeln e
 
 **Live-Server:** `http://127.0.0.1:8765/` (Original-Frontend, Edition-Repo). Ab Phase 4 zusätzlich `http://127.0.0.1:8766/` (Build-Output von `frontend-rework-2026-04`).
 
-**Phasen-Status:** Phase 1 (Inspektion) parallel in Bearbeitung. Phase 2 (Synthese) wartet auf Outputs A+B+C. Phase 3-5 sequenziell danach. Phase 6 (Reflux zur Mother) am Ende.
+**Phasen-Status:** Phase 1+2+3 abgeschlossen. **GitHub-Issues #1–#12** im Edition-Repo angelegt (Milestone `frontend-rework-2026-04`). 8 User-Klärungen durch Recherche beantwortet ([[Project/sugw-User-Klärungen]]). **Phase 4 (Implementation) startbereit** — wartet nur noch auf User-Freigabe für Pipeline-Repo-Branch-Erzeugung. Phase 5 (Verifikation), Phase 6 (Reflux zur Mother) folgen sequenziell.
 
 **Mother-Stand auf main:** Phase A (Methoden-Reife) und Phase B (Strukturkonsolidierung) abgeschlossen. METHOD trägt 5 ratifizierte Items (V1, V2, V3, V6, V8) plus Vier+1-Schichten-Architektur. 12 weitere V-Items konsensreif. Distributionsfähiger Template-Vault.
 

@@ -11,6 +11,12 @@ Append-only Audit-Spur. Format: `### YYYY-MM-DD HH:MM — Rolle` mit kurzer Besc
 
 ---
 
+### 2026-04-26 — Single-Claude-Curator — sugw-frontend-rework Phase-4-Vorbereitung komplett
+
+GitHub-Issues #1–#12 im Edition-Repo angelegt (Milestone `frontend-rework-2026-04`). 8 User-Klärungen durch Recherche beantwortet in [[Project/sugw-User-Klärungen]] (Code-Lektüre + Daten-Stichproben + Original-Wortlaut, kein User-Aufruf nötig). READMEs in sugw-Vorschläge/ und sugw-Verifikation/. Traceability-Matrix mit Issue-Spalte erweitert. Roadmap- und CLAUDE-Status aktualisiert. Cross-Vault-Verlinkung in Second Brain: neuer Hub-Eintrag `Projects/sugw/SuGW – Frontend-Rework Stakeholder-Meeting 23.04.2026.md`, plus Updates in Strategischem Wissensdokument, Projektabschluss April 2026, ACTIVE-WORK. Method-Lessons-Erweiterung mit V21 (GitHub-Issues-Spiegel) + V22 (Recherche statt Klärung) als zweites Reflux-Finding. Phase 4 startbereit, wartet auf User-Freigabe für Pipeline-Repo-Branch.
+
+---
+
 ### 2026-04-26 — Single-Claude-Curator — sugw-frontend-rework Phase 2+3+5-Setup+6-Vorbereitung
 
 User-Auftrag: alles synthetisieren, zusammenführen, destillieren, verbessern und abschließen. Vier Phasen aus der Roadmap durchgezogen.

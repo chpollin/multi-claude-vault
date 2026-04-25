@@ -1,6 +1,7 @@
 ---
 type: knowledge
 vorschlag-id: V1
+github-issue: 1
 created: 2026-04-26
 updated: 2026-04-26
 tags: [sugw, vorschlag, frontend, daten-modell]

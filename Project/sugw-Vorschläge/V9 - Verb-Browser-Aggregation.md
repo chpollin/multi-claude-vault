@@ -1,6 +1,7 @@
 ---
 type: knowledge
 vorschlag-id: V9
+github-issue: 9
 created: 2026-04-26
 tags: [sugw, vorschlag, frontend, verb-browser]
 stakeholder-issues: [S35]

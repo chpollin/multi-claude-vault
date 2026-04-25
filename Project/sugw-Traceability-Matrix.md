@@ -69,19 +69,21 @@ Vollständige Zuordnung Stakeholder-Issue → Vorschlag → Implementations-Stat
 
 ## Vorschlags-Übersicht
 
-| V-ID | Kurztitel | Adressiert S-IDs | V-Owner | Schicht-Schwerpunkt |
-|---|---|---|---|---|
-| V1 | Korpus-Approval-Marker im Datenmodell | S25, S26, S28, S29, S31, S37 | A | Pipeline-Konfiguration / TEI-Header |
-| V2 | Filterung der Indizes auf geprüfte Korpora | S25, S26, S27, S29, S37 | A | Aggregator (durchgängige Anwendung) |
-| V3 | Suche: Volltext + ID + Diakritika-Normalisierung | S16, S17, S18, S19, S20 | A | Frontend-JS + Aggregator-Index |
-| V4 | Personen-Profile parallel zu Regesten | S21, S22, S27 | A | Build + Templates + Aggregator |
-| V5 | Bidirektionale Verlinkung + Beziehungen anzeigen | S22, S23, S24 | A | Aggregator + Templates |
-| V6 | Glossar mit Mouse-Over an Tabellen-Spalten | S3, S5, S6, S7, S11, S15, S17 | A+B | Glossar-Inhalt + Tooltip-Komponente |
-| V7 | Terminologie-Refactoring | S1, S2, S3, S4, S8, S9, S10 | B | Templates + Daten-Labels |
-| V8 | Statistiken: % statt absolut, Relation Gesamtbestand | S12, S13, S26, S37 | A | Pipeline-Aggregation + Frontend-Charts |
-| V9 | Verb-Browser-Aggregation | S35 | A | Pipeline (Verb-Cluster) + Frontend |
-| V10 | Exploration aufräumen | S32, S33, S34 | A | Templates + Routing |
-| V11 | Frontend-Polish | S14 + Claude-A-Befunde (Nav-Disabled-Inkonsistenz, Wiener-Neustadt-Dublette, Exploration-Hub-Dropdown, Datenstand-Fußzeile) | A | CSS + Templates + Aggregator-Normalisierung |
+Tracking-Issue: [Edition-Repo #12](https://github.com/chpollin/db_for_medieval_legal_transactions_edition/issues/12). Alle V-IDs als GitHub-Issues angelegt.
+
+| V-ID | Issue | Kurztitel | Adressiert S-IDs | V-Owner | Schicht-Schwerpunkt |
+|---|---|---|---|---|---|
+| V1 | [#1](https://github.com/chpollin/db_for_medieval_legal_transactions_edition/issues/1) | Korpus-Approval-Marker im Datenmodell | S25, S26, S28, S29, S31, S37 | A | Pipeline-Konfiguration / TEI-Header |
+| V2 | [#2](https://github.com/chpollin/db_for_medieval_legal_transactions_edition/issues/2) | Filterung der Indizes auf geprüfte Korpora | S25, S26, S27, S29, S37 | A | Aggregator (durchgängige Anwendung) |
+| V3 | [#3](https://github.com/chpollin/db_for_medieval_legal_transactions_edition/issues/3) | Suche: Volltext + ID + Diakritika-Normalisierung | S16, S17, S18, S19, S20 | A | Frontend-JS + Aggregator-Index |
+| V4 | [#4](https://github.com/chpollin/db_for_medieval_legal_transactions_edition/issues/4) | Personen-Profile parallel zu Regesten | S21, S22, S27 | A | Build + Templates + Aggregator |
+| V5 | [#5](https://github.com/chpollin/db_for_medieval_legal_transactions_edition/issues/5) | Bidirektionale Verlinkung + Beziehungen | S22, S23, S24 | A | Aggregator + Templates |
+| V6 | [#6](https://github.com/chpollin/db_for_medieval_legal_transactions_edition/issues/6) | Glossar mit Mouse-Over an Tabellen-Spalten | S3, S5, S6, S7, S11, S15, S17 | A+B | Glossar-Inhalt + Tooltip-Komponente |
+| V7 | [#7](https://github.com/chpollin/db_for_medieval_legal_transactions_edition/issues/7) | Terminologie-Refactoring | S1, S2, S3, S4, S8, S9, S10 | B | Templates + Daten-Labels |
+| V8 | [#8](https://github.com/chpollin/db_for_medieval_legal_transactions_edition/issues/8) | Statistiken: Prozent statt absolut, Relation Gesamtbestand | S12, S13, S26, S37 | A | Pipeline-Aggregation + Frontend-Charts |
+| V9 | [#9](https://github.com/chpollin/db_for_medieval_legal_transactions_edition/issues/9) | Verb-Browser-Aggregation | S35 | A | Pipeline (Verb-Cluster) + Frontend |
+| V10 | [#10](https://github.com/chpollin/db_for_medieval_legal_transactions_edition/issues/10) | Exploration aufräumen | S32, S33, S34 | A | Templates + Routing |
+| V11 | [#11](https://github.com/chpollin/db_for_medieval_legal_transactions_edition/issues/11) | Frontend-Polish | S14 + Inspektions-Befunde | A | CSS + Templates + Aggregator-Normalisierung |
 
 ## Vollständigkeits-Audit Phase 2
 

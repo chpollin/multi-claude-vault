@@ -1,6 +1,7 @@
 ---
 type: knowledge
 vorschlag-id: V11
+github-issue: 11
 created: 2026-04-26
 tags: [sugw, vorschlag, frontend, polish]
 stakeholder-issues: [S14]
