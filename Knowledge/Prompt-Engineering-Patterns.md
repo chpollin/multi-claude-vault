@@ -10,9 +10,9 @@ tags: [prompt-engineering, patterns, methode]
 
 # Prompt-Engineering-Patterns
 
-Konkrete Formulierungs-Patterns für die wiederkehrenden Kommunikationssituationen im Multi-Claude-Setup. Plus Antipatterns aus der Beobachtung des heutigen Tages (siehe [[falldaten/2026-04-25-bootstrap-und-rollenwechsel]]).
+Konkrete Formulierungs-Patterns für die wiederkehrenden Kommunikationssituationen im Multi-Claude-Setup. Plus Antipatterns aus der Beobachtung des heutigen Tages (siehe [[Findings/2026-04-25 - Bootstrap und Rollenwechsel]]).
 
-Klassenzuordnung nach [[STRUCTURE]]: Methoden-Draft ohne eigene V7-Klasse. Lebt provisorisch im Root, bei Ratifizierung Migration nach [[METHOD]] (siehe V7-Stellungnahme im [[BACKLOG]]).
+Klassenzuordnung nach [[METHOD]]: Methoden-Draft ohne eigene V7-Klasse. Lebt provisorisch im Root, bei Ratifizierung Migration nach [[METHOD]] (siehe V7-Stellungnahme im [[BACKLOG]]).
 
 ## Sessionstart
 
@@ -145,12 +145,12 @@ Welche willst du jetzt treffen, welche später?"
 
 ## Übergreifend: Selbstreferenz und Kontextstabilität
 
-Patterns funktionieren, wenn alle Instanzen sie gleich anwenden. Methode braucht: explizite Beispiele in [[CLAUDE]] (V6 Sample-Eintrag aus dem [[BACKLOG]]) und periodische Re-Validierung über Lage-Notizen (Schicht 4 in [[sync-stack-patterns]]).
+Patterns funktionieren, wenn alle Instanzen sie gleich anwenden. Methode braucht: explizite Beispiele in [[CLAUDE]] (V6 Sample-Eintrag aus dem [[BACKLOG]]) und periodische Re-Validierung über Lage-Notizen (Schicht 4 in [[Sync-Stack-Patterns]]).
 
 ## Anschluss
 
-- [[falldaten/2026-04-25-bootstrap-und-rollenwechsel]] — Quelle der heutigen Beobachtungen.
-- [[sync-stack-patterns]] — Sync-Schichten, auf denen diese Patterns operieren.
+- [[Findings/2026-04-25 - Bootstrap und Rollenwechsel]] — Quelle der heutigen Beobachtungen.
+- [[Sync-Stack-Patterns]] — Sync-Schichten, auf denen diese Patterns operieren.
 - [[Beobachtung Claude-1]] — Eskalations-Schwelle in drei Stufen, ergänzt das Konflikt-Eskalation-Pattern.
 - [[BACKLOG]] — Vorschläge V1–V14 als Anwendungsfälle der Patterns "Methodenvorschlag" und "Stellungnahme".
 - [[COORDINATION]] — Beispiel-Container für die meisten Patterns.
@@ -159,4 +159,4 @@ Patterns funktionieren, wenn alle Instanzen sie gleich anwenden. Methode braucht
 
 - Reichen acht Patterns, oder braucht es weitere (z.B. Lage-Notiz schreiben, Antipattern-Beobachtung melden, Migration ratifizierter Methodenelemente)?
 - Wer pflegt diese Pattern-Bibliothek — bleibt sie hier oder wandert in [[METHOD]], sobald ratifiziert?
-- Wie validieren wir, dass Patterns wirklich angewendet werden — über Beobachtungs-Sync (Schicht 5 in [[sync-stack-patterns]]) oder explizite Compliance-Checks?
+- Wie validieren wir, dass Patterns wirklich angewendet werden — über Beobachtungs-Sync (Schicht 5 in [[Sync-Stack-Patterns]]) oder explizite Compliance-Checks?

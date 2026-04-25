@@ -1,19 +1,22 @@
 ---
-type: instance-contribution
-instance: claude-1
-role: inhaltliche Kuration / Wissensbringer
+type: vault-resource
 created: 2026-04-26
-status: complete
-source-vault: c:\Users\Chrisi\Documents\obsidian
+updated: 2026-04-26
+tags: [reference, lesevault]
+status: reviewed
+source-vault: c:/Users/Chrisi/Documents/obsidian
+origin: ausgegliedert aus `Wissensbasis Claude-1.md` 2026-04-26 (V9-Anwendung — Inhalt dient allen drei Rollen, nicht nur dem Wissensbringer-Slot der Bootstrap-Phase)
 ---
 
-# Wissensbasis Claude-1 (vollständig)
+# Wissensbasis Lesevault
 
-Diese Notiz fasst zusammen, was Claude #1 als Wissensbringer aus dem Quell-Vault `c:\Users\Chrisi\Documents\obsidian` für das Methoden-Forschungsprojekt verfügbar machen kann. Referenz, nicht Erzählung — gegliedert nach Sachgebieten, scanbar von oben nach unten. Tiefenstand: Frühjahr 2026, Schwerpunkt April. Was hier nicht steht, ist entweder im Quell-Vault belegbar aber nicht akut präsent, oder mir schlicht nicht bekannt (siehe `## Lücken`).
+Schnellreferenz auf den Quell-Vault `c:/Users/Chrisi/Documents/obsidian` für alle Rollen im Forschungsprojekt. Referenz, nicht Erzählung — gegliedert nach Sachgebieten, scanbar von oben nach unten. Tiefenstand: Frühjahr 2026, Schwerpunkt April. Was hier nicht steht, ist entweder im Quell-Vault belegbar aber nicht akut präsent oder zum Zeitpunkt der Erstellung dieser Wissensbasis nicht bekannt (siehe `## Lücken im Wissen`).
 
-## Schnellstart für #2 und #3
+Diese Datei ist Vault-Resource, kein Rollen-Beitrag — V9 (Beitragsdatei-Konvention) trennt sie konsequent von [[Claude-1]]. Aktualisierungen und Erweiterungen können von jeder Rolle eingebracht werden, mit Pre-Edit-Read und kurzer Hinweisspur in [[COORDINATION#Hinweise]].
 
-Christopher Pollin betreibt unter der Marke DHCraft ein digital-humanistisches Forschungs- und Dienstleistungsumfeld mit zwei Hauptachsen: erstens kulturwissenschaftliche Erschließung mit LLM-gestützten Methoden (Editionen, OCR/HTR, semantische Modellierung, Datenrettung), zweitens Methodenarbeit zu Promptotyping, epistemischer Infrastruktur und Scholar-Centered AI. Der Quell-Vault ist als zentraler Wissensspeicher organisiert — rund 458 Dokumente, eine Hub-Triade aus ACTIVE-WORK (operativ), CLAUDE (formal) und VAULT-OPERATIONS (strategisch-methodisch), eine TAG-TAXONOMY und klare Konventionen für Frontmatter, Naming und Archivierung. Aktiv laufen rund ein Dutzend Projekte plus eine ausdifferenzierte Paper-Landschaft 2026 mit vier venue-fixierten und vier konzeptionellen Beiträgen. Die wichtigsten Querkonzepte, die in mehreren Projekten und Papers gleichzeitig relevant sind: Epistemische Infrastruktur, Promptotyping, Editor-in-the-Loop, Continuous Editorial Integration, Vogeler-Ringe, Bookkeeping Ontology. Der User arbeitet ausschließlich über Claude — manuelles Vault-Browsing findet nicht statt, was die Anforderungen an Konventionen und Auffindbarkeit hochzieht. Diese Notiz dient als Konsultations-Layer für #2 und #3, damit beide nicht den Quell-Vault leerlesen müssen, um sich zu orientieren.
+## Schnellstart
+
+Christopher Pollin betreibt unter der Marke DHCraft ein digital-humanistisches Forschungs- und Dienstleistungsumfeld mit zwei Hauptachsen: erstens kulturwissenschaftliche Erschließung mit LLM-gestützten Methoden (Editionen, OCR/HTR, semantische Modellierung, Datenrettung), zweitens Methodenarbeit zu Promptotyping, epistemischer Infrastruktur und Scholar-Centered AI. Der Quell-Vault ist als zentraler Wissensspeicher organisiert — rund 458 Dokumente, eine Hub-Triade aus ACTIVE-WORK (operativ), CLAUDE (formal) und VAULT-OPERATIONS (strategisch-methodisch), eine TAG-TAXONOMY und klare Konventionen für Frontmatter, Naming und Archivierung. Aktiv laufen rund ein Dutzend Projekte plus eine ausdifferenzierte Paper-Landschaft 2026 mit vier venue-fixierten und vier konzeptionellen Beiträgen. Die wichtigsten Querkonzepte, die in mehreren Projekten und Papers gleichzeitig relevant sind: Epistemische Infrastruktur, Promptotyping, Editor-in-the-Loop, Continuous Editorial Integration, Vogeler-Ringe, Bookkeeping Ontology. Der User arbeitet ausschließlich über Claude — manuelles Vault-Browsing findet nicht statt, was die Anforderungen an Konventionen und Auffindbarkeit hochzieht. Diese Notiz dient als Konsultations-Layer, damit Rollen nicht den Quell-Vault leerlesen müssen, um sich zu orientieren.
 
 ## User und Geschäftskontext
 
@@ -151,19 +154,17 @@ Die Memory speichert über zwölf konkrete Feedback-Muster, die Claudes wiederho
 
 Im Vault keine persönlichen E-Mail-Adressen, Telefonnummern, Privatanschriften Dritter — Rollen ersetzen Namen. Eigene Privatdaten als Platzhalter. Eigene Geschäftsdaten (Firma DHCraft, UID, Website) sind erlaubt. Personennamen nicht als `[[Wikilinks]]`, nur als Plaintext im Rollenkontext. Geldbeträge nicht konkret, nur Stundenkontingente, Rechnungsstatus, Förderstatus.
 
-## Aktueller Tagesstand 2026-04-26
+## Tagesstand bei Erstellung der Wissensbasis (2026-04-26)
 
-Gestern (2026-04-25) wurde [[VAULT-OPERATIONS]] grundlegend refactored — Aufgabentypen-Logik aus dem aufgelösten ACTIVE-KNOWLEDGE-Dokument konsolidiert, Glossar projektspezifischer Begriffe formalisiert, Forschungsprogramm-Narrativ aus dem Vault-Hub entfernt und in FWF-Antrag und Promptotyping-Paper verlagert. Außerdem [[CLAUDE-COORDINATION]] als Scratchpad für parallele Claude-Instanzen eingeführt.
+Am 2026-04-25 wurde [[VAULT-OPERATIONS]] im Lesevault grundlegend refactored — Aufgabentypen-Logik aus dem aufgelösten ACTIVE-KNOWLEDGE-Dokument konsolidiert, Glossar projektspezifischer Begriffe formalisiert, Forschungsprogramm-Narrativ aus dem Vault-Hub entfernt und in FWF-Antrag und Promptotyping-Paper verlagert. Außerdem [[CLAUDE-COORDINATION]] als Scratchpad für parallele Claude-Instanzen eingeführt.
 
-Heute wurde der Drei-Claude-Frame ausgerollt: jede Instanz definiert ihre Rolle, alle drei sollen konstruktiv zusammenarbeiten, das Steuerungsdokument iterativ verbessern, und das Ganze als Methoden-Forschungsprojekt zu Multi-Claude-Kollaboration betreiben. Im Quell-Vault ist die Rolle [[VAULT-OPERATIONS#Vault-Architekt]] kanonisiert, Slot #3 in CLAUDE-COORDINATION belegt. Claude #1 (diese Instanz) ist als Wissensbringer zugeordnet. Slot #2 ist offen.
-
-Heute wurde der Methoden-Vault `agents-working-vault` eröffnet. Erste Beiträge von Claude #1: [[Claude-1]] (kompakte Selbsteinordnung mit Sync-Vorschlag v0.1), [[Koordination]] (Bulletin-Board), und diese Notiz als volle Wissensbasis.
+Am 2026-04-26 wurde der Drei-Rollen-Frame ausgerollt (Koordinator, Strukturarbeiter, Inhalt) und der Methoden-Vault initial unter `agents-working-vault` eröffnet (mittlerweile umbenannt nach `multi-claude-vault` und unter `C:\Users\Chrisi\Documents\GitHub\multi-claude-vault\` als GitHub-Repository [chpollin/multi-claude-vault](https://github.com/chpollin/multi-claude-vault) migriert). Diese Wissensbasis entstand initial als Beitrag der Wissensbringer-Rolle (Bootstrap-Phase) und wurde 2026-04-26 als Vault-Resource ausgegliedert.
 
 ## Lücken im Wissen
 
 - **Repo-Stand.** Aktueller Code-Stand der Repos M³GIM, SuGW, SZD-HTR, zbz-ocr-tei, slides-generator wird nicht im Quell-Vault gespiegelt. Aussagen dazu sind höchstens auf Stand der letzten Memory-Synchronisation (April 2026).
 - **Schreibprozesse intern.** Längere Schreibarbeit (Forum Wissenschaft, ÖAW, Code4Lib, KIBA) findet in eigenen Sessions oder Critical-Collaborator-Workflows statt — Outline-Stände und Abstracts sind dokumentiert, aber nicht der laufende Textstand.
-- **Person-Inhalte.** DSGVO-bedingt sind viele Kontaktdaten, Personenrollen und Geldbeträge bewusst nicht im Vault — daraus folgt: ich kenne *was* gemacht wird, aber oft nicht *mit wem genau* oder *zu welchen finanziellen Bedingungen*.
+- **Person-Inhalte.** DSGVO-bedingt sind viele Kontaktdaten, Personenrollen und Geldbeträge bewusst nicht im Vault — diese Wissensbasis kennt *was* gemacht wird, aber oft nicht *mit wem genau* oder *zu welchen finanziellen Bedingungen*.
 - **Fast-aktive Frontier-KI-Entwicklungen** jenseits dessen, was im Vault dokumentiert ist (z.B. neueste Modelle, EU AI Act-Updates, DPO-Updates) — nicht systematisch nachgeführt.
 - **Persönlicher Kontext** des Users jenseits der Arbeitsbeziehung.
 

@@ -1,8 +1,8 @@
 ---
 type: finding
 created: 2026-04-25
-updated: 2026-04-25
-version: 0.2
+updated: 2026-04-26
+version: 0.3
 author: Claude #3 (Inhalt)
 status: draft
 tags: [falldaten, bootstrap, rollenwechsel, konflikterkennung]
@@ -10,9 +10,9 @@ tags: [falldaten, bootstrap, rollenwechsel, konflikterkennung]
 
 # Falldaten 2026-04-25 — Bootstrap und Rollenwechsel
 
-Erster Tag der Multi-Claude-Vault-Kollaboration. Drei Instanzen plus User. Lesevault [c:/Users/Chrisi/Documents/obsidian](c:/Users/Chrisi/Documents/obsidian) als Wissensquelle, Schreibvault `agents-working-vault` als Werkstatt. Dieses Dokument hält die Beobachtungen fest, bevor sie verblassen.
+Erster Tag der Multi-Claude-Vault-Kollaboration. Drei Instanzen plus User. Lesevault [c:/Users/Chrisi/Documents/obsidian](c:/Users/Chrisi/Documents/obsidian) als Wissensquelle, Schreibvault zum Zeitpunkt der Beobachtung als `agents-working-vault` (am 2026-04-26 nach `multi-claude-vault` umbenannt und in [chpollin/multi-claude-vault](https://github.com/chpollin/multi-claude-vault) migriert). Dieses Dokument hält die Beobachtungen fest, bevor sie verblassen.
 
-Klassen-Zuordnung nach [[STRUCTURE#Schicht 4 — Forschungsmaterial (kumulativ)]]: dies ist faktisch ein Finding. Bei V7-Ratifizierung Migration zu `Findings/2026-04-25 - Bootstrap und Rollenwechsel.md` vorgesehen.
+Klassen-Zuordnung nach [[METHOD#Schicht 4 — Forschungsmaterial]]: dies ist faktisch ein Finding. Bei V7-Ratifizierung Migration zu `Findings/2026-04-25 - Bootstrap und Rollenwechsel.md` vorgesehen.
 
 ## Phasen
 
@@ -78,14 +78,14 @@ Beobachtung: die bisherige Sessionende-Konvention ("Eintrag entfernen oder mit `
 
 ## Anschluss
 
-- [[sync-stack-patterns]] — Race Conditions und Pre-Read-Disziplin in Schicht 2 und 3.
-- [[prompt-engineering-patterns]] — Sessionstart, Rollenwechsel, Konflikt-Eskalation, Anfrage an User.
-- [[Finding 2026-04-25 - Race Conditions und Strukturkonflikte]] — Strukturarbeiter-Sicht auf dieselben Befunde, ergänzt diese Datei.
+- [[Sync-Stack-Patterns]] — Race Conditions und Pre-Read-Disziplin in Schicht 2 und 3.
+- [[Prompt-Engineering-Patterns]] — Sessionstart, Rollenwechsel, Konflikt-Eskalation, Anfrage an User.
+- [[Findings/2026-04-25 - Race Conditions und Strukturkonflikte]] — Strukturarbeiter-Sicht auf dieselben Befunde, ergänzt diese Datei.
 - [[BACKLOG]] — V8 (umgesetzt), V9, V10, V12, V13, V14 sind Adressen für die hier benannten Lücken.
 - [[Beobachtung Claude-1]] — Koordinator-Sicht mit Snapshot-Konvention und Kommunikationskarte v0.1.
 
 ## Offene Fragen
 
 - Soll diese Datei als Finding migriert werden (siehe F12 zur Datei-Naming-Konvention) oder als Falldaten-Genre eigenständig bleiben?
-- Wo liegt die Grenze zwischen Falldaten (eigene Beobachtung) und Finding (strukturierter Befund mit Adresse-Vorschlägen)? Aktuell überlappt diese Datei mit [[Finding 2026-04-25 - Race Conditions und Strukturkonflikte]] — Konsolidierung sinnvoll?
+- Wo liegt die Grenze zwischen Falldaten (eigene Beobachtung) und Finding (strukturierter Befund mit Adresse-Vorschlägen)? Aktuell überlappt diese Datei mit [[Findings/2026-04-25 - Race Conditions und Strukturkonflikte]] — Konsolidierung sinnvoll?
 - Wie häufig sollen Falldaten/Findings entstehen — pro Tag, pro Schlüsselereignis, pro Methodenfrage?

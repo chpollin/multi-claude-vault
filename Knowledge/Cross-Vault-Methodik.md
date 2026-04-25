@@ -1,8 +1,8 @@
 ---
 type: methode-konvention
 created: 2026-04-25
-updated: 2026-04-25
-version: 0.2
+updated: 2026-04-26
+version: 0.3
 author: Claude #3 (Inhalt)
 status: draft
 tags: [cross-vault, methode]
@@ -10,15 +10,15 @@ tags: [cross-vault, methode]
 
 # Cross-Vault-Methodik
 
-Konkrete Disziplin im Verhältnis Lesevault [c:/Users/Chrisi/Documents/obsidian](c:/Users/Chrisi/Documents/obsidian) und Schreibvault `agents-working-vault`. Die Asymmetrie ist konstitutiv: Lesevault ist Quelle und bleibt read-only, Schreibvault ist Werkstatt und ist read-write.
+Konkrete Disziplin im Verhältnis Lesevault [c:/Users/Chrisi/Documents/obsidian](c:/Users/Chrisi/Documents/obsidian) und Schreibvault `multi-claude-vault` (seit 2026-04-26 als Repo unter `C:\Users\Chrisi\Documents\GitHub\multi-claude-vault\`, GitHub-Remote [chpollin/multi-claude-vault](https://github.com/chpollin/multi-claude-vault)). Die Asymmetrie ist konstitutiv: Lesevault ist Quelle und bleibt read-only, Schreibvault ist Werkstatt und ist read-write.
 
-Klassenzuordnung nach [[STRUCTURE]]: Methoden-Draft ohne eigene V7-Klasse. Lebt provisorisch im Root, bei Ratifizierung Migration nach [[METHOD]] (siehe V7-Stellungnahme im [[BACKLOG]]).
+Klassenzuordnung nach [[METHOD]]: Methoden-Draft ohne eigene V7-Klasse. Lebt provisorisch im Root, bei Ratifizierung Migration nach [[METHOD]] (siehe V7-Stellungnahme im [[BACKLOG]]).
 
 ## Asymmetrie-Prinzip
 
 Der Lesevault wird im Forschungsprojekt als Untersuchungsobjekt und Wissensquelle behandelt. Edits dort verändern das, was wir untersuchen — methodisch unsauber, weil Beobachtung und Eingriff vermischt würden. Daher: Lesevault read-only.
 
-Ausnahme: wenn der User explizit den Auftrag gibt, im Lesevault zu editieren (z.B. Methodenelemente aus dem Schreibvault zurück nach VAULT-OPERATIONS migrieren). Dann ist es eine bewusste, dokumentierte Anwendung — nicht Beifang der Forschung. Ein solcher Auftrag wandert über Schicht 6 (Konversations-Sync, siehe [[sync-stack-patterns]]) als Hinweis "alle" in [[COORDINATION]].
+Ausnahme: wenn der User explizit den Auftrag gibt, im Lesevault zu editieren (z.B. Methodenelemente aus dem Schreibvault zurück nach VAULT-OPERATIONS migrieren). Dann ist es eine bewusste, dokumentierte Anwendung — nicht Beifang der Forschung. Ein solcher Auftrag wandert über Schicht 6 (Konversations-Sync, siehe [[Sync-Stack-Patterns]]) als Hinweis "alle" in [[COORDINATION]].
 
 ## Zitierregeln
 
@@ -60,13 +60,13 @@ Wenn ein Methodenelement im Schreibvault ratifiziert ist und in den Lesevault wa
 
 ## Falldaten und Beobachtungen
 
-Beobachtungen aus dem Lesevault, die Falldaten für unsere Methode liefern (z.B. wie ein Refactoring im Lesevault aussieht, wie eine andere Instanz dort agiert), werden im Schreibvault unter `falldaten/` (oder per V7 `Findings/`) dokumentiert mit Lesevault-Referenz, *nicht* durch Lesevault-Annotation. Beispiel: [[falldaten/2026-04-25-bootstrap-und-rollenwechsel]].
+Beobachtungen aus dem Lesevault, die Falldaten für unsere Methode liefern (z.B. wie ein Refactoring im Lesevault aussieht, wie eine andere Instanz dort agiert), werden im Schreibvault unter `falldaten/` (oder per V7 `Findings/`) dokumentiert mit Lesevault-Referenz, *nicht* durch Lesevault-Annotation. Beispiel: [[Findings/2026-04-25 - Bootstrap und Rollenwechsel]].
 
 ## Anschluss
 
-- [[sync-stack-patterns]] Schicht 7 (Cross-Vault-Sync) — formal verankert.
+- [[Sync-Stack-Patterns]] Schicht 7 (Cross-Vault-Sync) — formal verankert.
 - [[CLAUDE]] Sektion "Quellenbezug zum Lesevault" — provisorisch verankert, wird bei Ratifizierung dieses Dokuments verschlankt und auf hier verwiesen.
-- [[falldaten/2026-04-25-bootstrap-und-rollenwechsel]] — Lesevault-Refactoring während des Bootstraps als Falldaten-Beispiel.
+- [[Findings/2026-04-25 - Bootstrap und Rollenwechsel]] — Lesevault-Refactoring während des Bootstraps als Falldaten-Beispiel.
 
 ## Offene Fragen
 

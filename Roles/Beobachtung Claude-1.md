@@ -157,6 +157,74 @@ Beschreibt, wie die drei Instanzen miteinander reden — beobachtet, nicht vorge
 - LOG.md ist verlässlich, aber chronologisch — Querverweise zwischen Aktionen verschiedener Rollen sind nicht aufgelöst.
 - Inhaltliche Beiträge stehen in eigenen Dateien (Claude-N.md), die andere lesen müssen — keine automatische Sichtbarkeit.
 
+## Snapshot 2026-04-26 — Refactoring-Block-Start
+
+**Anlass:** Strategische Entscheidung im Userdialog 2026-04-26: vollständiger Refactoring-Block des Schreibvaults plus Einbringung konstitutiver Lesevault-Konzepte als ein zusammenhängender Push. User hat Defaults bestätigt — Modell C (Hybrid: Source-Verweis als Default plus selektive Extraktion für methodisch konstitutive Knoten), konstitutive Knoten zuerst (Forschungsleitstelle, Promptotyping, anchor-project), `Concepts/`-Schicht als V19-Vorschlag, MIT-Lizenz, Push-Modus mit Lage-Notiz Synchronisation 2 als Abschluss-Synthese, METHOD-Migration der Method-Drafts nach Konsens.
+
+**Dateibestand (Stand jetzt, mtime aufsteigend):**
+
+| Datei | Größe | mtime | Eigentümer |
+| --- | --- | --- | --- |
+| Claude-2.md | 10162 | 18:59 | Strukturarbeiter |
+| Session 2026-04-26 - Synchronisation 1.md | 10417 | 18:59 | Koordinator |
+| sync-stack-patterns.md | 10603 | 18:59 | Inhalt |
+| Beobachtung Claude-1.md | 13505 | 18:59 | Koordinator |
+| Wissensbasis Lesevault.md | 18783 | 18:59 | gemeinsame Vault-Resource |
+| MISSION.md | 1913 | 18:59 | Strukturarbeiter |
+| CLAUDE.md | 2970 | 18:59 | Strukturarbeiter |
+| Finding 2026-04-25 - Race Conditions und Strukturkonflikte.md | 4746 | 18:59 | Strukturarbeiter |
+| Claude-1.md | 5873 | 18:59 | Koordinator |
+| STRUCTURE.md | 7577 | 18:59 | Strukturarbeiter |
+| prompt-engineering-patterns.md | 9217 | 18:59 | Inhalt |
+| Claude-3.md | 9974 | 18:59 | Inhalt |
+| README.md | 2053 | 19:00 | Strukturarbeiter (Stub) |
+| cross-vault-methodik.md | 5047 | 19:14 | Inhalt |
+| falldaten/2026-04-25-bootstrap-und-rollenwechsel.md | 9007 | 19:14 | Inhalt |
+| LOG.md | 10915 | 19:16 | gemeinsam, append-only |
+| COORDINATION.md | 14044 | 19:16 | gemeinsam |
+| METHOD.md | 3366 | 19:18 | Strukturarbeiter |
+| BACKLOG.md | 27423 | 19:18 | gemeinsam |
+
+**Per-Rolle-Stand:**
+
+- *Strukturarbeiter (#2)* — Phase A erste Welle abgeschlossen: V1 und V6 nach METHOD migriert. Slot zeigt zweite Welle (V2/V3/V8) in Vorbereitung. Mit dem Refactoring-Block kommt Phase A in den Abschluss-Push: zweite Welle plus V7-Ratifizierung plus Pfad-Drift in eigenem Scope plus Templates plus README plus LICENSE-Verifikation plus Concepts-Schicht-Vorschlag (V19) plus METHOD-Aufnahme der Method-Drafts.
+- *Inhalt (#3)* — Drei Method-Drafts in v0.2/v0.3, Falldaten-Studie, Beitragsplan in Claude-3. Bereit für Lesevault-Konzept-Extraktion (Forschungsleitstelle, Promptotyping, anchor-project) plus Erweiterung Method-Drafts um V15 (Subagent), V17 (Validation-Loop), V18 (Multi-Mode).
+- *Koordinator (#1)* — Sessionstart in dieser Iteration nach Userdialog. Eigene Refactoring-Anteile in einem Push abgearbeitet: R3 (Wissensbasis-Rename), R7 (dieser Snapshot), V14-Stellungnahme + V19-Vorschlag in BACKLOG, drei Übergaben in COORDINATION, LICENSE (MIT), Slot- und LOG-Updates.
+
+**Offene Konflikte / Refactoring-Items:**
+
+1. *Pfad-Drift* `agents-working-vault` → `multi-claude-vault` in CLAUDE Z.8, STRUCTURE Z.12, Claude-2 Z.15. Domäne Strukturarbeiter.
+2. *Schicht-4-Migration* `falldaten/2026-04-25-bootstrap-und-rollenwechsel.md` → `Findings/2026-04-25 - Bootstrap und Rollenwechsel.md` als V14b-Anwendung nach V7-Ratifizierung. Domäne Strukturarbeiter (Move + STRUCTURE-Update) plus Inhalt (Anschluss-Sektionen nachziehen).
+3. *README-Ausbau* zu Onboarding-Anleitung für fremde Klon-User. Domäne Strukturarbeiter.
+4. *Templates* anlegen — `Template-Session.md`, `Template-Finding.md`, `Template-Experiment.md`, `Template-Claude-N.md` plus EXAMPLES-Konvention für Schicht-4-Sub-Ordner. Voraussetzung für Distribution als Template-Vault. Domäne Strukturarbeiter.
+5. *Method-Drafts → METHOD* nach Konsens (sync-stack-patterns, cross-vault-methodik, prompt-engineering-patterns als METHOD-Sektionen oder als eigene Schicht-3-Files mit METHOD-Verweis). Domäne Inhalt (Substanz) plus Strukturarbeiter (METHOD-Aufnahme).
+6. *Concepts-Schicht* — V19-Vorschlag (Concepts/ als neue Schicht-Klasse für vault-übergreifendes Source-Material) plus Konzept-Extraktion nach Modell C. Domäne Strukturarbeiter (Schicht-Architektur, V19-Stellungnahme) plus Inhalt (Extraktion der drei konstitutiven Knoten).
+7. *F6-F13* in Lage-Notiz Synchronisation 1 — Konsens-Abschluss erwartet im Refactoring-Block.
+8. *CLAUDE.md `## Aktueller Stand`-Block* oben für selbsterklärendes Sessionstart fremder Instanzen. Domäne Strukturarbeiter.
+
+**Methoden-Stand:**
+
+- METHOD: 2 ratifizierte Items (V1 Rolle als Identifikator, V6 Pre-Edit-Read).
+- BACKLOG: 19 Items — V1+V6 ratifiziert, V11 entfällt, V2/V3/V8 in zweiter Welle, V7/V9/V10/V12/V13/V14/V15/V16/V17/V18 in Diskussion, V19 (Concepts-Schicht) neu mit dieser Iteration.
+- Offene Fragen: F1-F5 mit Antworten dokumentiert, F6-F13 in Lage-Notiz pending Konsens.
+- MISSION stabil.
+
+**Anomalien:**
+
+- Datums-Inkonsistenz zwischen System-Datum (2026-04-25) und Vault-Konvention (2026-04-26 in COORDINATION/LOG/Lage-Notiz). Vault-Konvention beibehalten — Folge-Einträge auf 2026-04-26, sonst zerfällt die Audit-Spur.
+- Refactoring-Block erzeugt parallelen Schreib-Druck auf mehrere Schicht-1- und Schicht-3-Dateien gleichzeitig — V6 Pre-Edit-Read wird stärker beansprucht. Bei Engpass V13 (Files locked als opt-in) als zweite Schicht aktivieren, insbesondere bei METHOD-Aufnahme der Method-Drafts.
+- Lesevault-Wissens-Einbringung verändert das Reflux-Risiko-Profil — Modell C dokumentiert die Asymmetrie weiter, aber #3's Reflux-Verbote in cross-vault-methodik müssen in Concepts/-Extraktion explizit zitiert werden.
+
+**Diff zum Snapshot 2026-04-26 18:13:**
+
+- *Bestand neu:* Claude-2.md, STRUCTURE.md, Finding 2026-04-25, Claude-3.md, falldaten/, sync-stack-patterns.md, cross-vault-methodik.md, prompt-engineering-patterns.md, Session 2026-04-26 - Synchronisation 1.md, README.md (Stub), LICENSE (MIT, mit dieser Iteration), .gitignore, .git/.
+- *Bestand umbenannt:* Wissensbasis Claude-1.md → Wissensbasis Lesevault.md (R3 erledigt mit dieser Iteration).
+- *Bestand entfernt:* Koordination.md (Kleinschreibung) durch V8-Konsolidierung 2026-04-25.
+- *Migration:* Vault nach `C:\Users\Chrisi\Documents\GitHub\multi-claude-vault\` verschoben, git-Repo initialisiert, mehrere Commits gepusht.
+- *METHOD:* leer → V1 + V6 ratifiziert.
+- *BACKLOG:* V1-V6 → V1-V19 (V11 entfällt; V19 Concepts-Schicht neu).
+- *Risiken aus Lage-Notiz 1:* drei der vier ⚠ jetzt im Refactoring-Block adressiert; Methodenmotor-Friedhof durch erste Ratifikation entkräftet.
+
 ## Nächste Snapshots
 
-Geplant: nach Stellungnahmen von #2 und #3 zu den Konflikten, nach erstem Eintrag von Struktur-Rolle, nach erster Ratifizierung in METHOD.
+Geplant: nach Refactoring-Block-Abschluss (Lage-Notiz Synchronisation 2), bei detektiertem Konflikt während des parallelen Refactoring-Pushes von #2 und #3, nach Phase-A-Abschluss-Ratifikation, bei Phase-Übergang nach Phase B/C/D.

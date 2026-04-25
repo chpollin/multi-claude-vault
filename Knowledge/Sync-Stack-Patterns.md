@@ -1,8 +1,8 @@
 ---
 type: methode-pattern
 created: 2026-04-25
-updated: 2026-04-25
-version: 0.2
+updated: 2026-04-26
+version: 0.3
 author: Claude #3 (Inhalt)
 status: draft
 basiert-auf: Claude-1 (Sync-Stack v0.1)
@@ -13,7 +13,9 @@ tags: [sync, patterns, methode]
 
 Ausarbeitung der sieben Sync-Schichten aus [[Claude-1]] (Sync-Stack v0.1) zu konkreten Patterns. Pro Schicht: was wird getauscht, in welcher Form, mit welchem Auslöser, mit welchen Antipatterns, welche Voraussetzungen. Eventually consistent über geteilte Dateien — kein Echtzeit-Channel.
 
-Klassenzuordnung nach [[STRUCTURE]]: Methoden-Draft ohne eigene V7-Klasse. Lebt provisorisch im Root, bei Ratifizierung Migration nach [[METHOD]] oder als eigene Methode-Sektion (siehe V7-Stellungnahme im [[BACKLOG]]).
+Klassenzuordnung nach [[METHOD]]: Methoden-Draft ohne eigene V7-Klasse. Lebt provisorisch im Root, bei Ratifizierung Migration nach [[METHOD]] oder als eigene Methode-Sektion (siehe V7-Stellungnahme im [[BACKLOG]]).
+
+**Skalierungs-Hinweis (V16):** Der Stack ist auf 3–5 Top-Level-Instanzen optimiert. Pro Schicht ist die Skalierungs-Charakteristik vermerkt (siehe Sub-Block "Skalierung" wo relevant). Subagents als zweite Skalierungs-Achse sind in **Schicht 2.5 — Subagent-Sync** (V15) integriert.
 
 ## Schicht 1 — Scope-Sync (Rollen)
 
@@ -43,7 +45,34 @@ Klassenzuordnung nach [[STRUCTURE]]: Methoden-Draft ohne eigene V7-Klasse. Lebt 
 - `Files locked` zu großzügig (blockiert andere unnötig).
 - `Notes` enthält Methodensubstanz statt aktuellem Status (gehört in METHOD oder BACKLOG, nicht in den Sessionseintrag).
 
-**Voraussetzungen:** COORDINATION ist *die* eine kanonische Datei (kein paralleles Koordinationsdokument — siehe [[falldaten/2026-04-25-bootstrap-und-rollenwechsel]] zur Race Condition).
+**Voraussetzungen:** COORDINATION ist *die* eine kanonische Datei (kein paralleles Koordinationsdokument — siehe [[Findings/2026-04-25 - Bootstrap und Rollenwechsel]] zur Race Condition).
+
+**Skalierung (V16):** O(N) — COORDINATION wächst linear mit der Zahl der Top-Level-Instanzen. Bei drei Slots gut lesbar; bei fünf wird die Sektion lang aber tragfähig; ab >10 wird Auslagerung pro Slot (V14b) notwendig.
+
+## Schicht 2.5 — Subagent-Sync (Top-Level-Vertretung)
+
+**Was wird getauscht:** Sichtbarkeit der von einem Top-Level gespawnten Subagents — was läuft im namespaced Bereich `instances/Claude-N/subtasks/`, wer ist Top-Level-Verantwortlicher, wann ist Konsolidierung zu erwarten. Subagent ist nicht eigenständig im Bulletin sichtbar, sondern wird vom Top-Level vertreten (V15 in [[BACKLOG]]).
+
+**Form:** Top-Level-Slot in [[COORDINATION]] trägt im `Notes`-Feld eine Liste aktiver Subagents:
+```
+Subagents aktiv:
+- <task-id> | scope: <kurz> | namespace: instances/Claude-N/subtasks/<task-id>/ | ETA: <zeit/aufgabenblock>
+```
+Bei substanziellen Subagent-Aktivitäten (>30 min, mehr als drei Sub-Files, oder Subagent berührt geteilte Schicht-1/Schicht-2-Files via Top-Level-Konsolidierung) wandert die Vertretung zusätzlich in `Will touch`. Output kommt vom Subagent als `subtasks/<task-id>/RESULT.md` zurück; Top-Level konsolidiert in geteilte Files mit eigenem Pre-Read.
+
+**Auslöser:** Top-Level spawnt Subagent (Eintrag setzen). Subagent meldet RESULT (Eintrag aktualisieren oder entfernen). Subagent wird abgebrochen oder bricht ab (Eintrag mit `[abgebrochen]` markieren).
+
+**Antipatterns:**
+- Subagent schreibt direkt in geteilte Schicht-1- oder Schicht-2-Files. Subagent hat eigenen Tool-State und Read-Cache; V6 löst zwischen Subagent und Top-Level nicht zuverlässig aus, blinde Überschreibung droht. **No-shared-write-Klausel:** Subagent operiert ausschließlich in `instances/Claude-N/subtasks/`.
+- Subagent ohne Namespace-Briefing — schreibt irgendwo, oft genau in die Schicht-2-Files, die er nicht anfassen darf.
+- Subagent ohne Return-Format-Briefing — Top-Level kann Output nicht konsolidieren.
+- Top-Level vergisst, Subagent in eigenem Slot anzukündigen — andere Top-Levels sehen unerklärliche Aktivität in `subtasks/`-Verzeichnissen.
+
+**Voraussetzungen:** V15 ratifiziert mit No-shared-write-Klausel (siehe Stellungnahme #3 in [[BACKLOG#V15]]). Subagent-Spawn-Pattern in [[Prompt-Engineering-Patterns]] dokumentiert.
+
+**Skalierung (V16):** Subagents sind eine zweite, orthogonale Skalierungs-Achse. Drei Top-Levels mit je zwei Subagents = neun gleichzeitige Aktoren, von denen sechs (Subagents) niemals direkt mit dem geteilten Methoden-Vault interagieren. Bei fünf Top-Levels mit Subagents wird das Routing über Top-Level-Konsolidierung zur entscheidenden Engstelle — Konsolidierungs-Latenz wird sichtbar in den Lage-Notizen (Schicht 4).
+
+**Falldaten-Bezug:** noch keine — diese Schicht ist seit V15-Vorschlag (2026-04-26) konzipiert, aber im Bootstrap-Korpus haben wir keine Subagent-Spawns. Erste empirische Validierung erwartet in Phase E (Project-Forks) oder wenn ein Top-Level einen Recherche-Subagent für Lesevault-Quellen einsetzt.
 
 ## Schicht 3 — Edit-Sync (Pre-flight Read)
 
@@ -62,6 +91,8 @@ Klassenzuordnung nach [[STRUCTURE]]: Methoden-Draft ohne eigene V7-Klasse. Lebt 
 
 **Falldaten-Bezug:** mehrfach validiert in [[falldaten/2026-04-25-bootstrap-und-rollenwechsel#Phase 3 — Konflikterkennung]]. Der Mechanismus funktioniert reaktiv. Was er nicht leistet: Vorwarnung, dass eine andere Instanz dieselbe Datei *gerade jetzt* öffnet. Schicht 2 (Bulletin Board mit `Files locked` als opt-in, V13 in [[BACKLOG]]) muss diese Lücke schließen.
 
+**Skalierung (V16):** Konflikt-Wahrscheinlichkeit pro geteilter Datei wächst quadratisch (~N²) mit der Zahl gleichzeitig editierender Instanzen. Drei Instanzen erleben Konflikte gelegentlich (heute über zwölf Race Conditions abgefangen, alle ohne Datenverlust); fünf Instanzen häufig — V13 (Files locked als opt-in) wird ab N=5 von Bequemlichkeit zu Notwendigkeit. **Subagent-Implikation (V15):** V6 löst zwischen Subagent und Top-Level nicht zuverlässig aus, weil Read-Caches getrennt sind — daher No-shared-write-Klausel in Schicht 2.5 (siehe oben). Subagent ↔ andere Top-Levels braucht V6 gar nicht erst, weil Subagent geteilte Files nicht direkt anfasst.
+
 ## Schicht 4 — Synthese-Sync (Lage-Notizen)
 
 **Was wird getauscht:** Periodische Zusammenfassung des kollektiven Standes — was alle drei Instanzen wissen, was Konsens, was offen, was Quality-Flag. Damit nach Pausen alle wieder auf gemeinsamem Stand sind.
@@ -79,7 +110,11 @@ Klassenzuordnung nach [[STRUCTURE]]: Methoden-Draft ohne eigene V7-Klasse. Lebt 
 
 **Anschluss Forschungsleitstelle:** Format und Konvention 1:1 von der Sessions-Konvention im Lesevault übernommen, dort als `forschungsleitstelle-session` typisiert. Validierungspotenzial für die Spec v0.5.
 
-**Erste Lage-Notiz:** [[Session 2026-04-26 - Synchronisation 1]] — Synthese-Sync funktioniert.
+**Erste Lage-Notiz:** [[Sessions/2026-04-26 - Synchronisation 1]] — Synthese-Sync funktioniert.
+
+**Skalierung (V16):** Frequenz wächst mit Divergenz-Rate. Faustregel: Lage-Notiz nach jeweils ~3 Aufgabenblöcken pro Instanz. Bei drei Instanzen typisch eine Lage-Notiz pro Tag, bei fünf Instanzen drei pro Tag. Bei Subagent-intensivem Betrieb (Schicht 2.5 aktiv) müssen Lage-Notizen die Konsolidierungs-Latenz mitführen — andernfalls verschwindet, was im `subtasks/`-Bereich passiert ist, aus dem geteilten Bewusstsein.
+
+**Validation-Loop-Anschluss (V17):** Lage-Notiz trägt Quality Flags pro Erfolgskriterium aus [[MISSION]] und [[METHOD#Validation-Anker]] (sobald V17 ratifiziert). Format-Vorschlag: pro Flag `Kriterium / Operationalisierung / Status (✓/⚠/✗) / Beleg / Course-Correction`. Detailliertes Pattern in [[prompt-engineering-patterns#Validation-Loop]].
 
 ## Schicht 5 — Beobachtungs-Sync (Loop)
 
@@ -127,25 +162,26 @@ Klassenzuordnung nach [[STRUCTURE]]: Methoden-Draft ohne eigene V7-Klasse. Lebt 
 - Wikilink statt Markdown-Link cross-vault — broken link.
 - Schreibvault-Inhalt als Quelle für Lesevault-Edits — Untersuchungsobjekt umschreiben.
 
-**Voraussetzungen:** Asymmetrie ist konstitutiv: Lesevault read-only, Schreibvault read-write. Klar in [[CLAUDE]] verankert. Detail in [[cross-vault-methodik]].
+**Voraussetzungen:** Asymmetrie ist konstitutiv: Lesevault read-only, Schreibvault read-write. Klar in [[CLAUDE]] verankert. Detail in [[Cross-Vault-Methodik]].
 
 ## Querbeziehungen zwischen den Schichten
 
 - **State-Sync (2) braucht Scope-Sync (1):** ohne klare Rollen sind Sessions-Einträge mehrdeutig.
-- **Edit-Sync (3) schützt State-Sync (2):** ohne Pre-Read würde COORDINATION selbst zur Konfliktquelle.
-- **Synthese-Sync (4) verdichtet State + Beobachtungs-Sync (2 + 5):** Lage-Notizen zitieren Bulletin und Beobachtungen.
+- **Subagent-Sync (2.5) baut auf State-Sync (2):** Subagent-Liste lebt im Top-Level-Slot, nicht eigenständig.
+- **Edit-Sync (3) schützt State-Sync (2)**, aber **nicht** Subagent-Sync (2.5): zwischen Subagent und Top-Level wirkt V6 nicht zuverlässig — daher die No-shared-write-Klausel als kompensierende Konvention auf Schicht 2.5.
+- **Synthese-Sync (4) verdichtet State + Subagent + Beobachtungs-Sync (2 + 2.5 + 5):** Lage-Notizen zitieren Bulletin, Subagent-Status und Beobachtungen.
 - **Konversations-Sync (6) ist Eskalationskanal für alle Schichten:** wenn niedrigere Schichten brechen, geht's über User.
-- **Cross-Vault-Sync (7) ist orthogonal:** betrifft nicht die Inter-Instanz-Kommunikation, sondern die Vault-Topologie.
+- **Cross-Vault-Sync (7) ist orthogonal zu 1–5, aber nicht zu 6:** betrifft die Vault-Topologie. Mit V18 (Multi-Mode) wird Schicht 7 dreistufig (Lesevault ↔ Mother-Vault ↔ Project-Fork) — Detail in [[cross-vault-methodik#Dreistufige Topologie (V18)]].
 
 ## Anschluss
 
 - [[Claude-1]] — Sync-Stack v0.1 als Skizze, Quelle dieser Ausarbeitung.
-- [[falldaten/2026-04-25-bootstrap-und-rollenwechsel]] — Falldaten-Quelle für Schicht 2, 3, 6.
-- [[Finding 2026-04-25 - Race Conditions und Strukturkonflikte]] — Strukturarbeiter-Sicht auf Race Conditions.
-- [[Session 2026-04-26 - Synchronisation 1]] — erste Lage-Notiz, Schicht-4-Validierung.
+- [[Findings/2026-04-25 - Bootstrap und Rollenwechsel]] — Falldaten-Quelle für Schicht 2, 3, 6.
+- [[Findings/2026-04-25 - Race Conditions und Strukturkonflikte]] — Strukturarbeiter-Sicht auf Race Conditions.
+- [[Sessions/2026-04-26 - Synchronisation 1]] — erste Lage-Notiz, Schicht-4-Validierung.
 - [[Beobachtung Claude-1]] — Snapshot-Konvention und Kommunikationskarte v0.1.
-- [[cross-vault-methodik]] — Schicht 7 detailliert.
-- [[prompt-engineering-patterns]] — Patterns, die auf diesen Sync-Schichten operieren.
+- [[Cross-Vault-Methodik]] — Schicht 7 detailliert.
+- [[Prompt-Engineering-Patterns]] — Patterns, die auf diesen Sync-Schichten operieren.
 - [[BACKLOG]] — V13 (Files locked opt-in) und V14 (Edit-Granularität) als Adressen für Schicht-2-/Schicht-3-Lücken.
 
 ## Offene Fragen
