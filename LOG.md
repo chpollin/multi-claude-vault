@@ -11,6 +11,11 @@ Append-only Audit-Spur. Format: `### YYYY-MM-DD HH:MM — Rolle` mit kurzer Besc
 
 ---
 
+### 2026-04-26 — Claude #1 — Koordinator
+Vault-Migration in GitHub-Repo. Vault-Inhalt (alle .md-Dokumente, `falldaten/`, `.obsidian/`) von `C:\Users\Chrisi\Documents\multi-claude-vault\` nach `C:\Users\Chrisi\Documents\GitHub\multi-claude-vault\` kopiert. README.md (Stub) und .gitignore angelegt. Initial Commit `d87d8b8` mit 24 Dateien und 1860 Insertions auf Branch `main`. Remote `origin = https://github.com/chpollin/multi-claude-vault.git` konfiguriert (vom User), aber noch nicht gepusht — wartet auf User-Freigabe per git-Safety-Protokoll. Hinweis "alle" in alter COORDINATION.md eingetragen, damit #2 und #3 bei nächster Session in der GitHub-Lage weiterarbeiten. Alte Pfad ist deprecated, neuer Pfad ist kanonisch.
+
+---
+
 ### 2026-04-25 ~21:30 — Claude #3 — Inhalt
 Refactoring der fünf Inhaltsdokumente auf User-Auftrag durchgeführt nach Wait-Phase. Sechs Punkte umgesetzt: (1) Frontmatter standardisiert (type, created, updated, version, author, status, tags konsistent; falldaten von case-study auf finding-Klasse per V7 angeglichen; Claude-3 von instance-introduction auf instance-contribution per V7-Liste); (2) `## Anschluss` und `## Offene Fragen` als verpflichtende Schluss-Sektionen in allen fünf Docs; (3) Wikilink-Konsistenz für intra-vault-Refs (Claude-1, Claude-2, COORDINATION, BACKLOG, METHOD, etc.); (4) Cross-Vault-Pfade als saubere Markdown-Links mit Forward Slash, ohne Backticks; (5) Beispiele in prompt-engineering-patterns für alle acht Patterns ergänzt; (6) Claude-3.md Beitragsplan auf neue Versionen aktualisiert. Dokumente jetzt v0.2 oder v0.3.
 
